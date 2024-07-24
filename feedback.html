@@ -1,61 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback Form</title>
-
-    <!-- BOOTSTRAP CDN Links -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/
-css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
-
-    <!-- Custom CSS file -->
-    <link rel="stylesheet" href="css/feedback.css">
-    <!-- Start of Async Drift Code -->
-    <script>
-    "use strict";
-    
-    !function() {
-      var t = window.driftt = window.drift = window.driftt || [];
-      if (!t.init) {
-        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-        t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
-        t.factory = function(e) {
-          return function() {
-            var n = Array.prototype.slice.call(arguments);
-            return n.unshift(e), t.push(n), t;
-          };
-        }, t.methods.forEach(function(e) {
-          t[e] = t.factory(e);
-        }), t.load = function(t) {
-          var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-          o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-          var i = document.getElementsByTagName("script")[0];
-          i.parentNode.insertBefore(o, i);
-        };
-      }
-    }();
-    drift.SNIPPET_VERSION = '0.3.1';
-    drift.load('bunni3fp889g');
-    </script>
-    <!-- End of Async Drift Code -->
+    <title>Job Apply Form</title>
+    <link rel="stylesheet" href="css/apply.css">
 </head>
-
 <body>
 <div class="wrapper">
     <nav class="nav">
@@ -84,31 +34,32 @@ css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
         </div>
     </nav>
 
-    <section id="form-section">
-        <h1 class="h1-tag">Your Feedback Is important For Us</h1>
-        <form class="form-content-section">
-            <div class="form-group">
-                <label for="exampleInputText">Name</label>
-                <input type="text" class="form-control" id="exampleInputText" placeholder="Enter Your Name">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputText">Contact Number(Optional)</label>
-                <input type="text" class="form-control" id="exampleInputText">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Feedback</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary myclass">Send Your Feedback</button>
+    <div class="container">
+        <h1>Feedback</h1>
+        <form id="registrationForm">
+            <label for="name">Name(Optional):</label>
+            <input type="text" id="name" name="name">
+            
+            <label for="email">Email(Optional):</label>
+            <input type="email" id="email" name="email">
+            
+            <label for="phone">Phone(Optional):</label>
+            <input type="tel" id="phone" name="phone">
+            
+            <label for="position">Sex:</label>
+            <select id="position" name="position">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            
+            <label for="experience">Feedback:</label>
+            <textarea id="experience" name="experience" rows="5" required></textarea>
+            
+            <button type="submit">Submit</button>
         </form>
-    </section>
+    </div>
 </div>
+    <script src="js/apply.js"></script>
 </body>
-
 </html>
