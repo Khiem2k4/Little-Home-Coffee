@@ -6,12 +6,11 @@
     font-family: 'Poppins', sans-serif;
 }
 body {
-    background-color: #f2f2f2;
-    box-sizing: border-box;
-    background: url("../pic/bg.jpg");
+    background: url(../pic/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    color: #fff;
     overflow: hidden;
 }
 
@@ -68,56 +67,51 @@ img{
 .btn:hover{
     background: rgba(255, 255, 255, 0.3);
 }
-
-.container {
-    max-width: 100%;
-    width: 90%;
-    margin: 80px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-h1 {
-    text-align: center;
-    color: #5d4037;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin: 10px 0 5px;
-    color: #5d4037;
-}
-
-input, textarea, select, button {
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-}
-
-button {
-    background-color: #8d6e63;
+.h1-tag{
     color: #fff;
-    border: none;
-    cursor: pointer;
+    text-align: center;
+    margin-top: 4%;
 }
-
-button:hover {
-    background-color: #5d4037;
+.form-content-section{
+    width: 50%;
+    margin-top: 3%;
+    margin-left: 25%;
 }
-
-textarea{
-    resize: none;
-}
-
-@media only screen and (min-width: 768px) {
-    .container {
-        max-width: 600px;
+@media screen and (max-width: 600px){
+    .form-content-section{
+        width: 100%;
+        margin-top: 10%;
+        margin-left: 0;
     }
+}
+
+@media screen and (max-width: 800px){
+    .form-content-section{
+        width: 100%;
+        margin-top: 10%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .form-group{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .btn-primary{
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width: 800px){
+    .form-group{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .btn-primary{
+        margin-left: 20px;
+    }
+}
+.myclass{
+    border-radius: 20px;
+    background-color: #5d4037;
 }
